@@ -34,6 +34,7 @@ function clearStats() {
 }
 
 var config = new Config();
+var tcpClient = new TcpClient(config.tcpServerAddress, config.tcpServerPort);
 var sites = new Sites(config);
 var tracker = new Tracker(config, sites);
 

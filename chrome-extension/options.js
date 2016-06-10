@@ -117,4 +117,3 @@ document.addEventListener("DOMContentLoaded", function () {
     "click", download);
   restoreOptions();
 });
-

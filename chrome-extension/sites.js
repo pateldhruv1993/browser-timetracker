@@ -38,7 +38,8 @@ Object.defineProperty(Sites.prototype, "sites", {
 Sites.prototype.getSiteFromUrl = function(url) {
   var match = url.match(this._siteRegexp);
   if (match) {
-    return match[1];
+    //return match[1];
+    return url;
   }
   return null;
 };

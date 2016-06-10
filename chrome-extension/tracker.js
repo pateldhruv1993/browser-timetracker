@@ -39,6 +39,7 @@ function Tracker(config, sites) {
   chrome.alarms.create(
     "updateTime",
     {periodInMinutes: config.updateTimePeriodMinutes});
+    
   chrome.alarms.onAlarm.addListener(function(alarm) {
     if (alarm.name == "updateTime") {
       // These event gets fired on a periodic basis and isn't triggered

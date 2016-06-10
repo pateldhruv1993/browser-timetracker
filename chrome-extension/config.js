@@ -114,9 +114,42 @@ Object.defineProperty(Config.prototype, "idle", {
   },
   set: function(i) {
     if (i) {
-      localStorage.idle = "true"; 
+      localStorage.idle = "true";
     } else {
       localStorage.idle = "false";
     }
   }
 });
+
+
+
+/**
+ * TCP Server Address
+ */
+ Object.defineProperty(Config.prototype, "tcpServerAddress", {
+   get: function() {
+     if (!localStorage.tcpServerAddress) {
+       localStorage.tcpServerAddress = "127.0.0.1";
+     }
+     return localStorage.tcpServerAddress;
+   },
+   set: function(i) {
+     localStorage.tcpServerAddress = i;
+   }
+ });
+
+
+ /**
+  * TCP Server Port
+  */
+  Object.defineProperty(Config.prototype, "tcpServerPort", {
+    get: function() {
+      if (!localStorage.tcpServerPort) {
+        localStorage.tcpServerPort = 8000;
+      }
+      return parseInt(localStorage.tcpServerPort);
+    },
+    set: function(i) {
+      localStorage.tcpServerPort = i;
+    }
+  });

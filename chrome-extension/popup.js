@@ -92,8 +92,7 @@ function addLocalDisplay() {
     maxTime = sites[sortedSites[0][0]];
   }
   var relativePct = 0;
-  for (var index = 0; ((index < sortedSites.length) && (index < max));
-      index++ ){
+  for (var index = 0; ((index < sortedSites.length) && (index < max)); index++ ){
    var site = sortedSites[index][0];
    row = document.createElement("tr");
    cell = document.createElement("td");
@@ -196,6 +195,11 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("clear").addEventListener("click", clearStats);
   document.getElementById("options").addEventListener("click",
       function() { chrome.runtime.openOptionsPage(); });
+  document.getElementById("connectToTCP").addEventListener(
+      "click", function(){
+        
+      });
+
   var buttons = document.querySelectorAll("button");
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function(e) {

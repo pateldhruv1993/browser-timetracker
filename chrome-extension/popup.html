@@ -9,6 +9,7 @@
   </style>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="buttons.css"/>
+  <script src="tcp-client.js"></script>
   <script src="config.js"></script>
   <script src="sites.js"></script>
   <script src="popup.js"></script>
@@ -17,7 +18,11 @@
   <body>
     <div id="button_row">
       <button id="options" class="pure-button">Options</button>&nbsp;
-      <button id="clear" class="pure-button">Clear</button>&nbsp;
+      <button id="clear" class="pure-button">Clear</button>&nbsp;<br>
+      <b>TCP Client info</b>
+      Server Address: <input type="text" id="serverAddress">&nbsp;
+      Server Port: <input type="text" id="serverPort" style="width: 80px;" value="8000">&nbsp;
+      <button id="connectToTCP" class="pure-button">Connect</button><br>
     </div>
     <div id="lastClear"></div>
     <div id="nextClear"></div>
